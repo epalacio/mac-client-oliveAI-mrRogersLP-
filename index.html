@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- --------------------- Marketo Variable Definitions --------------------- -->
+    <!-- General -->
+    <meta class="mktoColor" id="mainColor" mktoName="Main Color" default="#651FFF">
+    <meta class="mktoColor" id="gradient1" mktoName="Hero Background Gradient 1" default="#651FFF">
+    <meta class="mktoColor" id="gradient2" mktoName="Hero Background Gradient 2" default="#833DF5">
+    <meta class="mktoColor" id="bodyBackground" mktoName="Body Background" default="#FFF">
+
+    <!-- Module Order -->
+    <meta class="mktoString" id="orderSimpleTopBannerSection" mktoName="Order Simple Top Banner Section" default="1" allowHtml="true">
+    <meta class="mktoString" id="orderHero" mktoName="Order Hero" default="2" allowHtml="true">
+    <meta class="mktoString" id="orderHeroFullWidth" mktoName="Order Hero Full-W" default="3" allowHtml="true">
+    <meta class="mktoString" id="orderVidAndText" mktoName="Order Vid&Text" default="4" allowHtml="true">
+    <meta class="mktoString" id="orderTextAndVid" mktoName="Order Text&Vid" default="5" allowHtml="true">
+    <meta class="mktoString" id="orderImgAndText" mktoName="Order Img&Text" default="6" allowHtml="true">
+    <meta class="mktoString" id="orderTextAndImg" mktoName="Order Text&Img" default="7" allowHtml="true">
+    <meta class="mktoString" id="orderImgAndText2" mktoName="Order Img&Text2" default="8" allowHtml="true">
+    <meta class="mktoString" id="orderTextAndImg2" mktoName="Order Text&Img2" default="9" allowHtml="true">
+    <meta class="mktoString" id="orderQuoteSection" mktoName="Order Quote Section" default="10" allowHtml="true">
+    <meta class="mktoString" id="orderParagraphSection" mktoName="Order Paragraph Section" default="11" allowHtml="true">
+    <meta class="mktoString" id="orderParagraphSection2" mktoName="Order Paragraph Section 2" default="12" allowHtml="true">
+    <meta class="mktoString" id="orderquoteBannerSection" mktoName="Order Quote Banner Section" default="13" allowHtml="true">
+    <meta class="mktoString" id="orderquoteBannerSection2" mktoName="Order Quote Banner Section 2" default="14" allowHtml="true">
+    <meta class="mktoString" id="orderFooterNotes" mktoName="Order Footer Notes" default="15" allowHtml="true">
+    <meta class="mktoString" id="orderFeaturesSection" mktoName="Order Features Section" default="16" allowHtml="true">
+    <meta class="mktoString" id="orderPartnersSection" mktoName="Order Simple Footer Section" default="17" allowHtml="true">
+    <meta class="mktoString" id="orderDividerSection" mktoName="Order Divider Section" default="18" allowHtml="true">
+    <meta class="mktoString" id="orderSimpleFooterSection" mktoName="Order Simple Footer Section" default="19" allowHtml="true">
+    <meta class="mktoString" id="orderComplexFooterSection" mktoName="Order Complex Footer Section" default="20" allowHtml="true">
+
+    <!-- Paddings & Margins -->
+    <meta class="mktoString" id="moduleTopPadding" mktoName="I&T T&I - Top Padding (px)" default="75" allowHtml="true">
+    <meta class="mktoString" id="moduleBottomPadding" mktoName="I&T T&I - Bottom Padding (px)" default="75" allowHtml="true">
+    <meta class="mktoString" id="moduleVidTopPadding" mktoName="V&T T&V - Top Padding (px)" default="75" allowHtml="true">
+    <meta class="mktoString" id="moduleVidBottomPadding" mktoName="V&T T&V - Bottom Padding (px)" default="75" allowHtml="true">
+    <meta class="mktoString" id="heroBottomPadding" mktoName="Hero - Bottom Padding (px)" default="75" allowHtml="true">
+    <meta class="mktoString" id="quoteParagraphPaddingsTB" mktoName="Quote and Paragraph - Top/Bot Padding (px)" default="75" allowHtml="true">
+    <meta class="mktoString" id="quoteBannerSectionsMargin" mktoName="Quote Banners - Top/Bot Margin (px)" default="75" allowHtml="true">
+    <meta class="mktoString" id="partnersSectionVMargin" mktoName="Partner Section - Top/Bot Margin (px)" default="75" allowHtml="true">
+    
+
+    <!-- Simple Top Banner Section -->
+    <meta class="mktoBoolean" id="showSimpleTopBannerSection" mktoName="Show Simple Top Banner Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+    <!-- Hero/Banner Section -->
+    <meta class="mktoString" id="bannerCTA" mktoName="Banner CTA" default="https://oliveai.com/">
+    <meta class="mktoBoolean" id="showForm" mktoName="Show Form?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    
+    <!-- Video and Text Section -->
+    <meta class="mktoColor" id="vidAndTextBgColor" mktoName="Video and Text Background" default="#fff">
+    <meta class="mktoBoolean" id="showVidAndText" mktoName="Show Video and Text Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="vidAndTextCTAShow" mktoName="Show V&T CTA?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="vidAndTextCTALink" mktoName="Video and Text CTA Link" default="https://oliveai.com/">
+    <meta class="mktoString" id="vidAndTextCTAText" mktoName="Video and Text CTA Text" default="Learn More">
+    <meta class="mktoColor" id="vidAndTextCTABgColor" mktoName="Video and Text CTA Background" default="#651FFF">
+    <meta class="mktoColor" id="vidAndTextCTATextColor" mktoName="Video and Text CTA Text Color" default="#FFF">
+    <meta class="mktoString" id="vidAndTextVideoLink" mktoName="Video and Text Vid Link" default="https://www.youtube.com/embed/srs8EyMOxJ8">
+
+    <!-- Text and Video Section -->
+    <meta class="mktoColor" id="textAndVideoBgColor" mktoName="Text and Video Background" default="#fff">
+    <meta class="mktoBoolean" id="showTextAndVid" mktoName="Show Text and Video Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="textAndVidCTAShow" mktoName="Show T&V CTA?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="textAndVidCTALink" mktoName="Text and Video CTA Link" default="https://oliveai.com/">
+    <meta class="mktoString" id="textAndVidCTAText" mktoName="Text and Video CTA Text" default="Learn More">
+    <meta class="mktoColor" id="textAndVidCTABgColor" mktoName="Text and Video CTA Background" default="#651FFF">
+    <meta class="mktoColor" id="textAndVidCTATextColor" mktoName="Text and Video CTA Text Color" default="#FFF">
+    <meta class="mktoString" id="textAndVidVideoLink" mktoName="Text and Video Vid Link" default="https://www.youtube.com/embed/srs8EyMOxJ8">
+
+    <!-- Image and Text Section -->
+    <meta class="mktoColor" id="imgAndTextBgColor" mktoName="Image and Text Background" default="#fff">
+    <meta class="mktoBoolean" id="showimgAndText" mktoName="Show Image and Text Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="imgAndTextCTAShow" mktoName="Show I&T CTA?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="imgAndTextCTALink" mktoName="Image and Text CTA Link" default="https://oliveai.com/">
+    <meta class="mktoString" id="imgAndTextCTAText" mktoName="Image and Text CTA Text" default="Learn More">
+    <meta class="mktoColor" id="imgAndTextCTABgColor" mktoName="Image and Text CTA Background" default="#651FFF">
+    <meta class="mktoColor" id="imgAndTextCTATextColor" mktoName="Image and Text CTA Text Color" default="#FFF">
+
+    <!-- Text and Image Section -->
+    <meta class="mktoColor" id="textAndImgBgColor" mktoName="Text and Image Background" default="#fff">
+    <meta class="mktoBoolean" id="showtextAndImg" mktoName="Show Text and Image Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="textAndImgCTAShow" mktoName="Show T&I CTA?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="textAndImgCTALink" mktoName="Text and Image CTA Link" default="https://oliveai.com/">
+    <meta class="mktoString" id="textAndImgCTAText" mktoName="Text and Image CTA Text" default="Learn More">
+    <meta class="mktoColor" id="textAndImgCTABgColor" mktoName="Text and Image CTA Background" default="#651FFF">
+    <meta class="mktoColor" id="textAndImgCTATextColor" mktoName="Image and Text CTA Text Color" default="#FFF">
+
+    <!-- Image and Text Section 2 -->
+    <meta class="mktoColor" id="imgAndTextBgColor2" mktoName="Image and Text 2 Background" default="#fff">
+    <meta class="mktoBoolean" id="showimgAndText2" mktoName="Show Image and Text Section 2?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="imgAndTextCTAShow2" mktoName="Show I&T CTA2?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="imgAndTextCTALink2" mktoName="Image and Text CTA2 Link" default="https://oliveai.com/">
+    <meta class="mktoString" id="imgAndTextCTAText2" mktoName="Image and Text CTA2 Text" default="Learn More">
+    <meta class="mktoColor" id="imgAndTextCTABgColor2" mktoName="Image and Text CTA2 Background" default="#651FFF">
+    <meta class="mktoColor" id="imgAndTextCTATextColor2" mktoName="Image and Text CTA2 Text Color" default="#FFF">
+
+    <!-- Text and Image Section 2 -->
+    <meta class="mktoColor" id="textAndImgBgColor2" mktoName="Text and Image Background" default="#fff">
+    <meta class="mktoBoolean" id="showtextAndImg2" mktoName="Show Text and Image Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="textAndImgCTAShow2" mktoName="Show T&I CTA?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="textAndImgCTALink2" mktoName="Text and Image CTA2 Link" default="https://oliveai.com/">
+    <meta class="mktoString" id="textAndImgCTAText2" mktoName="Text and Image CTA2 Text" default="Learn More">
+    <meta class="mktoColor" id="textAndImgCTABgColor2" mktoName="Text and Image CTA2 Background" default="#651FFF">
+    <meta class="mktoColor" id="textAndImgCTATextColor2" mktoName="Image and Text CTA2 Text Color" default="#FFF">
+
+    <!-- Quote Section -->
+    <meta class="mktoBoolean" id="showQuoteSection" mktoName="Show Quote Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+    <!-- Paragraph Section -->
+    <meta class="mktoBoolean" id="showParagraphSection" mktoName="Show Paragraph Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+    <!-- Paragraph Section 2 -->
+    <meta class="mktoBoolean" id="showParagraphSection2" mktoName="Show Paragraph Section 2?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+    <!-- Quote Banner Section -->
+    <meta class="mktoBoolean" id="showQuoteBannerSection" mktoName="Show Quote Banner Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="showQuoteBannerSectionImage" mktoName="Show Quote Banner Image?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="quotebannerCTALink" mktoName="Banner CTA Link" default="https://oliveai.com/">
+    <meta class="mktoString" id="quoteBannerCTAText" mktoName="Banner CTA Text" default="Learn More">
+    <meta class="mktoBoolean" id="showQuoteBannerCTA" mktoName="Show Quote Banner CTA?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoColor" id="gradient3" mktoName="Quote Banner Background Gradient 1" default="#651FFF">
+    <meta class="mktoColor" id="gradient4" mktoName="Quote Banner Background Gradient 2" default="#833DF5">
+    <meta class="mktoList" id="quoteBannerTextAlignment" mktoName="Quote Banner Text Alignment" values="left,center,right,justify" default="left">
+    <meta class="mktoColor" id="QuoteBannerCTABgColor" mktoName="Quote Banner CTA Background" default="#FFF">
+    <meta class="mktoColor" id="QuoteBannerCTATextColor" mktoName="Quote Banner CTA Text Color" default="#651FFF">  
+
+    <!-- Quote Banner Section 2 -->
+    <meta class="mktoBoolean" id="showQuoteBannerSection2" mktoName="Show Quote Banner Section 2?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="quotebannerCTA2Link" mktoName="Banner CTA2 Link" default="https://oliveai.com/">
+    <meta class="mktoString" id="quoteBannerCTA2Text" mktoName="Banner CTA2 Text" default="Learn More">
+    <meta class="mktoBoolean" id="showQuoteBannerCTA2" mktoName="Show Quote Banner CTA2?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoColor" id="quoteBannerSection2BackgroundColor" mktoName="Quote Banner 2 Background Color" default="#833DF5">
+    <meta class="mktoColor" id="QuoteBannerCTABgColor2" mktoName="Quote Banner CTA2 Background" default="#FFF">
+    <meta class="mktoColor" id="QuoteBannerCTATextColor2" mktoName="Quote Banner CTA2 Text Color" default="#651FFF">
+
+    <!-- Footer Notes Section -->
+    <meta class="mktoBoolean" id="showFooterNotesSection" mktoName="Show Footer Notes Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    
+    <!-- Features Section -->
+    <meta class="mktoBoolean" id="showFeaturesSection" mktoName="Show Features Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+    <!-- Partners Section -->
+    <meta class="mktoBoolean" id="showPartnersSection" mktoName="Show Simple Footer Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+    <!-- Divider Section -->
+    <meta class="mktoBoolean" id="showDividerSection" mktoName="Show Divider Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="dividerLineHeight" mktoName="Divider Line Height" default="50" allowHtml="true">
+    <meta class="mktoColor" id="dividerLineColor" mktoName="Text and Image Background" default="#833DF5">
+    
+    <!-- Simple Footer Section -->
+    <meta class="mktoBoolean" id="showSimpleFooterSection" mktoName="Show Simple Footer Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+    <!-- Complex Footer Section -->
+    <meta class="mktoBoolean" id="showComplexFooterSection" mktoName="Show Complex Footer Section?" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+    <!-- Other Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//templates.marketo.net/template1/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+    <!-- Custom styles for this template -->
+    <style>
+
+  /* Google Alternative to Sofia Pro  */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+      
+	* { 
+		margin: 0;
+		padding: 0px;
+    	font-family: 'Poppins',Arial,sans-serif;
+	} 
+      
+    body { 
+      	background: ${bodyBackground}; 
+        margin: 0; 
+        color: #696E74;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins',Arial,sans-serif;
+        font-weight: 700;
+    }
+
+    h1 {
+        color: #fff;
+        margin-bottom: 10px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 130%;
+    }
+
+    h2 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 2.5rem;
+      line-height: 130%;
+      color: #651FFF;
+      margin-bottom: 8px;
+    }
+
+    h5, li {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      color: #232020;
+    }
+
+    li {
+        line-height: 1;
+    }
+
+    p { 
+        padding: 0; 
+        margin-bottom: 12px; 
+        font-family: 'Poppins',Arial,sans-serif;
+        font-weight: 300;
+        font-size: 16px; 
+        line-height: 24px;
+        color: #696E74; 
+        margin-top: 10px; 
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    form {
+      background: #FFFFFF;
+    }
+
+    label {
+      color: #939393;
+    }
+
+    .alignleft { float: left; }
+    .alignright { float: right; }
+    .aligncenter {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        clear: both;
+    }
+    .centered {text-align: center}
+    .mt {margin-top: 30px;}
+    .mb {margin-bottom: 30px;}
+    .mtb {margin-top: 30px; margin-bottom: 30px;}
+
+    .expandToFit {
+    	max-height:100%;
+        max-width:100%;
+    }
+
+    .clear {
+        clear: both;
+        display: block;
+        font-size: 0;
+        height: 0;
+        line-height: 0;
+        width:100%;
+    }
+    ::-moz-selection  {
+        color: #fff;
+        text-shadow:none;
+        background:#2B2E31;
+    }
+    ::selection {
+        color: #fff;
+        text-shadow:none;
+        background:#2B2E31;
+    }
+    *,
+    *:after,
+    *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    a { 
+        padding: 0;
+        margin: 0;
+        text-decoration: none; 
+        -webkit-transition: background-color .4s linear, color .4s linear;
+        -moz-transition: background-color .4s linear, color .4s linear;
+        -o-transition: background-color .4s linear, color .4s linear;
+        -ms-transition: background-color .4s linear, color .4s linear;
+        transition: background-color .4s linear, color .4s linear;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: none;
+      color:#696E74;
+    }
+
+    /* Bootstrap Modifications */
+    .navbar-inverse {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .form-control {
+      border: 1px solid #939393;
+      box-sizing: border-box;
+      border-radius: 8px;
+    }
+
+    .btn-primary {
+      background: #651FFF;
+      border-color: #651FFF;
+      border-radius: 8px;
+      border: 1px solid #651FFF;
+      font-size: 18px !important;
+      padding: 10px 24px;
+    }
+
+    .btn-primary:active,
+    .btn-primary:hover {
+      background-color: #4f00fc;
+      border: 1px solid #4f00fc;
+    }
+
+    /* Button Configuration */
+    .btn-lg {
+        margin-right: 10px;
+    }
+
+    /* Simple Top Banner */
+    #simpleTopBannerSection {
+        background: #651FFF;
+        height: 75px;
+    }
+    
+
+    /* Header Gradient */
+    #is {
+        top: 0;
+        width: 100%;
+        min-height: 620px;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding-top: 10%;
+        padding-bottom: ${heroBottomPadding}px;
+        background: linear-gradient(200.21deg, ${gradient1} 16.49%, ${gradient2} 104.67%);
+        clip-path: ellipse(162% 100% at 27.6% 0%);
+    }
+
+    #is h5,
+    #is li {
+        color: #fff;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    #is ul {
+      line-height: 1.6;
+      padding-left: 1rem;
+    }
+
+    /* Font Icons Styling for White Sections */
+    .icons-white-bg i {
+        font-size: 30px;
+    }
+      
+    /* Image and Text */
+    #imgAndText,
+    #imgAndText2,
+    #textAndImg,
+    #textAndImg2 {
+        padding-top: ${moduleTopPadding}px;
+        padding-bottom: ${moduleBottomPadding}px;
+    }
+
+    #vidAndText,
+    #textAndVid {
+        padding-top: ${moduleVidTopPadding}px;
+        padding-bottom: ${moduleVidBottomPadding}px;
+    }
+
+    #imgAndText {
+        background-color: ${imgAndTextBgColor};
+    }
+
+    #imgAndText2 {
+        background-color: ${textAndImgBgColor};
+    }
+
+    #textAndImg {
+        background-color: ${imgAndTextBgColor2};
+    }
+
+    #textAndImg2 {
+      	background-color: ${textAndImgBgColor2};
+    }
+
+    #vidAndText {
+        background-color: ${vidAndTextBgColor};
+    }
+
+    #textAndVid {
+        background-color: ${textAndVidBgColor};
+    }
+      
+    /* Banner Section */
+    .quoteBannerSectionContainer {
+      background: linear-gradient(13.57deg, ${gradient3} 0%, ${gradient4} 98.13%);
+      border-radius: 8px;
+      max-width: 1120px;
+    } 
+
+    .quoteBannerSectionContainer2 {
+      background:${quoteBannerSection2BackgroundColor};
+      border-radius: 8px;
+      max-width: 1120px;
+    }
+
+    .quoteBannerSectionContainer2 h4 {
+      color: #651FFF;
+    }
+
+    .quoteBannerSectionContainer2 p {
+      color: #000;
+    }
+
+    /* Paragraph Section */
+    #paragraphSectionText p,
+    #paragraphSectionText2 p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      color: #232020;
+    }
+
+    /* Features Section */
+    #featuresSection {
+        background: #f8f4ff;
+        padding: 45px;
+        padding-top: 30px;
+    }
+
+    #featuresSection img {
+        padding-left: 10px;
+        padding-top: 25px;
+    }
+
+    #featuresSection h3 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 150%;
+      color: #651FFF;
+      padding: 8px 10px;
+      padding-top: 20px;
+      margin: 0;
+    }
+    #featuresSection p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      color: #232020;
+      padding:10px;
+      margin: 0;
+    }
+
+    /* Quote Section */
+    .quote,
+    .quote2 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 150%;
+      color: #232020;
+    }
+
+    #quoteSection,
+    #paragraphSection,
+    #paragraphSection2 {
+        padding: ${quoteParagraphPaddingsTB}px auto;
+    }
+
+    #quoteSectionQuote p,
+    #quoteSectionQuote2 p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 150%;
+      color: #232020;
+    }
+
+    #quoteSectionAuthor h4,
+    #quoteSectionAuthor2 h4 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 130%;
+      color: #651FFF;
+    }
+
+    #quoteBannerSection,
+    #quoteBannerSection2 {
+        margin: ${quoteBannerSectionsMargin}px auto !important;
+    }
+
+    #quoteBannerSectionTitle h4,
+    #quoteBannerSectionTitle2 h4 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 130%;
+      color: #FFFFFF;
+    }
+
+    #quoteBannerSectionText p,
+    #quoteBannerSectionText2 p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: #FFFFFF;
+    }
+
+    #quoteBannerSectionCTA {
+      background: #FFFFFF;
+    }
+
+    #quoteBannerSectionCTA2 {
+      background: #651FFF;
+      margin: auto;
+    }
+
+    #quoteBannerSectionCTA,
+    #quoteBannerSectionCTA2 {
+      width: max-content;
+      height: 47px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    #quoteBannerSectionCTA button,
+    #quoteBannerSectionCTA2 button {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    #quoteBannerSectionCTA a {
+      color: #651FFF;
+    }
+
+    #quoteBannerSectionCTA2 a {
+      color: #FFFFFF;
+    }
+
+    #quoteBannerSectionCTA a,
+    #quoteBannerSectionCTA2 a {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 47px;
+      text-align: center;
+    }
+
+    #quoteBannerSectionCTA a {
+      color: #651FFF;
+    }
+
+    #quoteBannerSectionCTA2 a {
+      color: #FFF;
+    }
+
+    .bannerIcon {
+        display: none !important;
+      }
+
+    /* Footer Notes Section */
+    #footerNotesSectionText {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 130%;
+      color: #000000;
+    }
+
+    /* Partners Section */
+    #partnersSection {
+        margin: ${partnersSectionVMargin}px auto;
+    }
+
+    #partnersSection .partnerImgDiv {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #partnersSection img {
+        max-width: 160px;
+        margin: 25px;
+    }
+
+    /* Divider Line */
+    #dividerSection {
+      display: block;
+      height: ${dividerLineHeight}px;
+      background: ${dividerLineColor};
+    }
+
+    /* Simple Footer Section */
+    #simpleFooterSection {
+        background: #651FFF;
+    }
+
+    #simpleFooterSection a,
+    #simpleFooterSection p {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    #simpleFooterSection a {
+        padding: 0px 10px;
+        text-decoration: none;
+    }
+
+    #simpleFooterSection a:hover,
+    #simpleFooterSection a:active, {
+        text-decoration: underline;
+    }
+
+    #complexFooterSection {
+      background: linear-gradient(180deg, #651FFF 0%, #833DF5 100%);
+      color: #fff !important;
+    }
+
+    .complexFooterLogo {
+      max-width: 75px;
+    }
+
+    #complexFooterSection p {
+      line-height: 160%;
+    }
+
+    #complexFooterSection p,
+    #complexFooterSection h3,
+    #complexFooterSection a {
+      color: #fff;
+    }
+
+    #complexFooterSection p,
+    #complexFooterSection a {
+      font-size: 16px;
+    }
+
+    #complexFooterSection h3 {
+      font-size: 2.4em;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    #complexFooterSection ul {
+      padding-left: 0px;
+    }
+
+    #complexFooterSection li {
+      margin-bottom: 15px;
+      list-style-type: none;
+    }
+
+    .complexFooterDivider {
+      margin: 0;
+      border: none !important;
+      height: 3px !important;
+      margin-top: 50px;
+      background-color: #b388ff !important;
+    }
+
+
+    .instaLogo {
+      max-width: 25px;
+    }
+
+    .linkedinLogo {
+      max-width: 22px;
+    }
+
+    .mktoForm input[type="text"]:focus, .mktoForm input[type="url"]:focus, .mktoForm input[type="email"]:focus, .mktoForm input[type="tel"]:focus, .mktoForm input[type="number"]:focus, .mktoForm input[type="date"]:focus, .mktoForm select.mktoField:focus, .mktoForm textarea.mktoField:focus {
+      background-color: #eee4ff;
+      box-shadow: 0 0 0 2px #b388fc,0 0 8px #b388fc;
+      border: 0px solid transparent !important;
+    }  
+
+    @media (min-width: 992px) {
+      h1 {
+        font-size: 5.5rem;
+      }
+
+      h2 {
+        font-size: 3.5rem;
+      }
+
+      .bannerIcon {
+        display: block !important;
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+      #quoteSection {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      #quoteSection {
+        margin-bottom: 30px;
+        padding-bottom: 80px;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      #quoteSection {
+        margin-bottom: 30px;
+        padding-bottom: 120px;
+      }
+    }
+
+    @media only screen and (max-width: 375px) {
+      #quoteSection {
+        margin-bottom: 30px;
+        padding-bottom: 230px;
+      }
+    }
+
+    </style>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="//templates.marketo.net/template1/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <main style="display: flex; flex-direction: column;">
+    
+    <!-- Simple Top Banner Section -->
+    <div id="simpleTopBannerSection" style="display:${showSimpleTopBannerSection}; order:${orderSimpleTopBannerSection};">
+        <div class="container">
+            <div class="row" style="padding-top: 14px;padding-bottom: 10px;">
+                <div class="col-12">
+                    <div class="mktoImg left" id="simpleTopLogo" mktoName="Simple Top Banner Logo" mktoImgClass="img-responsive" style="max-width: 130px;">
+                        <img src="https://discover.oliveai.com/rs/541-CSN-882/images/oliveAILogo.png" alt="OliveAI Logo" srcset="" style="max-width: 130px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Simple Top Banner Section -->
+
+
+    <!-- Hero Section -->
+    <div id="is" style="order:${orderHero};">
+    	<div class="container">
+            <div class="row align-items-start mb-5">
+                <div class="col-11 col-lg-6 mx-auto ps-lg-5 text-start">
+                  <div class="mktoText ps-lg-5" id="primaryBodyHeader" mktoName="Primary Header">
+                    <h1 class="">Olive optimizes and manages the healthcare supply chain</h1>
+                  </div>
+                  <div class="mktoText ps-lg-5" id="primaryBodyText" mktoName="Primary Body Text" style="color: #fff">
+                    <br>
+                    <br>
+                    <h5>Supplies are the second highest spend for health systems — after salaries. Reducing supply chain variation can save hospitals up to $9.9 million per year.1 Olive manages supplies and inventory across your enterprise to reduce costs. 
+                    <br>
+                    <br>
+                  </div>   
+                </div>
+                <div class="col-11 col-lg-5 mx-auto" style="display: ${showForm}; background-color: #fff; border-radius: 8px;">
+                  <div class="mktoText" id="formTitle" mktoName="Form Title" style="color: #651FFF !important; font-size: 36px; padding: 24px; padding-bottom: 0px;"><h2 style="color: #651FFF !important;">Book a free assessment</h2></div>
+                  <div class="mktoForm" id="primaryForm" mktoName="Primary Form" style="margin-bottom:0px; padding: 24px; padding-top: 0px;"></div>
+                  <div class="mktoText" id="privPolicyLink" mktoName="Privacy Policy" style="color: #651fff !important; font-size: 16px; margin: 0px auto !important; padding-left: 24px; padding-bottom: 30px; margin-top: -10px !important; text-decoration: underline !important;"><a style="color: #651FFF !important; margin: 0px auto !important;" href="https://oliveai.com/legal/" target="_blank">Our Privacy Policy</a></div>
+                </div>
+              </div><!--/row -->
+    	</div><!--/container -->
+    </div>
+    <!-- Hero Section -->
+
+    <!-- Hero Full-Width Section -->
+    <div id="is" style="order:${orderHeroFullWidth};">
+    	<div class="container">
+            <div class="row align-items-start mb-5">
+                <div class="col-12 mx-auto ps-lg-5 text-center">
+                  <div class="mktoText ps-lg-5" id="primaryBodyHeader2" mktoName="Primary Header">
+                    <h1 class="">Olive optimizes and manages the healthcare supply chain</h1>
+                  </div>
+                  <div class="mktoText ps-lg-5" id="primaryBodyText2" mktoName="Primary Body Text" style="color: #fff; font-size: 18px;">
+                    Supplies are the second highest spend for health systems — after salaries. Reducing supply chain variation can save hospitals up to $9.9 million per year.1 Olive manages supplies and inventory across your enterprise to reduce costs. 
+                  </div>   
+                </div>
+              </div><!--/row -->
+    	</div><!--/container -->
+    </div>
+    <!-- Hero Full-Width Section -->
+
+    
+
+    <!-- Video + Text Section -->
+    <div id="vidAndText" style="display:${showVidAndText}; order:${orderVidAndText};">
+    	<div class="container">
+        <div class="row align-items-center justify-content-center gap-5">
+          <div class="col-lg-5">
+            <iframe src="${vidAndTextVideoLink}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="438" height="325" frameborder="0"></iframe>
+          </div>
+          <div class="col-lg-5 px-3">
+            <div class="mktoText" id="vidAndTextHeader1" mktoName="Section Header">
+              <h2>Use a data-driven sourcing strategy</h2>
+            </div>
+            <div class="mktoText" id="vidAndTextBodyText1" mktoName="Section Body Text">
+              <h5>Olive analyzes spending habits and measures the cost of goods. She proactively uses vendor-agnostic analytics to manage product portfolios and identify high-quality products at competitive prices.<sup>1</sup></h5>
+            </div>
+            <a style="display: ${vidAndTextCTAShow}" href="${vidAndTextCTALink}"><button class="my-2 btn btn-primary" type="submit" style="background: ${vidAndTextCTABgColor} !important; border: 1px solid ${vidAndTextCTABgColor} !important; color: ${vidAndTextCTATextColor} !important">${vidAndTextCTAText}</button></a>
+          </div>
+        </div>
+    	</div>
+    </div>
+    <!-- Video + Text Section -->
+    
+    <!-- Text + Video Section -->
+    <div id="textAndVid" style="display:${showTextAndVid}; order:${orderTextAndVid};">
+    	<div class="container">
+        <div class="row align-items-center justify-content-center gap-5">
+          <div class="col-lg-5 px-3">
+            <div class="mktoText" id="textAndVidHeader1" mktoName="Section Header">
+              <h2>Use a data-driven sourcing strategy</h2>
+            </div>
+            <div class="mktoText" id="textAndVidBodyText1" mktoName="Section Body Text">
+              <h5>Olive analyzes spending habits and measures the cost of goods. She proactively uses vendor-agnostic analytics to manage product portfolios and identify high-quality products at competitive prices.<sup>1</sup></h5>
+            </div>
+            <a style="display: ${textAndVidCTAShow}" href="${textAndVidCTALink}"><button class="my-2 btn btn-primary" type="submit" style="background: ${textAndVidCTABgColor} !important; border: 1px solid ${textAndVidCTABgColor} !important; color: ${textAndVidCTATextColor} !important">${textAndVidCTAText}</button></a>
+          </div>
+          <div class="col-lg-5">
+            <iframe src="${textAndVidVideoLink}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="438" height="325" frameborder="0"></iframe>
+          </div>
+        </div>
+    	</div>
+    </div>
+    <!-- Text + Video Section -->
+
+    <!-- Img + Text Section 1 -->
+    <div id="imgAndText" style="display:${showimgAndText}; order:${orderImgAndText};">
+    	<div class="container">
+        <div class="row align-items-center justify-content-center gap-5">
+          <div class="col-lg-5">
+            <div class="mktoImg centered" id="imgAndTextImage1" mktoName="Section Image" mktoImgClass="img-responsive" style="max-height: 350px !important; border-radius: 8px;">
+            </div>
+          </div>
+          
+          <div class="col-lg-5 px-3">
+            <div class="mktoText" id="imgAndTextHeader1" mktoName="Section Header">
+              <h2>Use a data-driven sourcing strategy</h2>
+            </div>
+            <div class="mktoText" id="imgAndTextBodyText1" mktoName="Section Body Text">
+              <h5>Olive analyzes spending habits and measures the cost of goods. She proactively uses vendor-agnostic analytics to manage product portfolios and identify high-quality products at competitive prices.<sup>1</sup></h5>
+            </div>
+            <a style="display: ${imgAndTextCTAShow}" href="${imgAndTextCTALink}"><button class="my-2 btn btn-primary" type="submit" style="background: ${imgAndTextCTABgColor} !important; border: 1px solid ${imgAndTextCTABgColor} !important; color: ${imgAndTextCTATextColor} !important">${imgAndTextCTAText}</button></a>
+          </div>
+        </div>
+    	</div>
+    </div>
+    <!-- Img + Text Section 1 -->
+
+    <!-- Text + Img Section 1 -->
+    <div id="textAndImg" style="display:${showtextAndImg}; order:${orderTextAndImg};">
+    	<div class="container">
+        <div class="row align-items-center justify-content-center gap-5">
+          <div class="col-lg-5 px-3">
+            <div class="mktoText" id="textAndImgHeader1" mktoName="Section Header">
+              <h2>Refine materials management for greatest cost savings</h2>
+            </div>
+            <div class="mktoText" id="textAndImgBodyText1" mktoName="Section Body Text">
+              <h5>Using intelligent automation, Olive connects your EHR and ERP to improve sourcing and materials management. Olive evaluates historical trends to make recommendations on physician preference card updates, item master cleanup and inventory management.</h5>
+            </div>
+            <a style="display: ${textAndImgCTAShow}" href="${textAndImgCTALink}"><button class="my-2 btn btn-primary" type="submit" style="background: ${textAndImgCTABgColor} !important; border: 1px solid ${textAndImgCTABgColor} !important; color: ${textAndImgCTATextColor} !important">${textAndImgCTAText}</button></a>
+          </div>
+          <div class="col-lg-5">
+            <div class="mktoImg centered" id="textAndImgImage1" mktoName="Section Image" mktoImgClass="img-responsive" style="max-height: 350px !important; border-radius: 8px;">
+            </div>
+          </div>
+        </div>
+    	</div>
+    </div>
+    <!-- Text + Img Section 1 -->
+
+    <!-- Img + Text Section 2 -->
+    <div id="imgAndText2" style="display:${showimgAndText2}; order:${orderImgAndText2};">
+    	<div class="container">
+        <div class="row align-items-center justify-content-center gap-5">
+          <div class="col-lg-5">
+            <div class="mktoImg centered" id="imgAndTextImage2" mktoName="Section Image" mktoImgClass="img-responsive" style="max-height: 350px !important; border-radius: 8px;">
+            </div>
+          </div>
+          
+          <div class="col-lg-5 px-3">
+            <div class="mktoText" id="imgAndTextHeader2" mktoName="Section Header">
+              <h2>Streamline procurement and accounts payable</h2>
+            </div>
+            <div class="mktoText" id="imgAndTextBodyText2" mktoName="Section Body Text">
+              <h5>From initial purchase order to final payment, Olive double checks that all delivered supplies match the items purchased. Olive reviews and reconciles POs and inventory before routing invoices to the correct approvers and accounts payable teams.</h5>
+            </div>
+            <a style="display: ${imgAndTextCTAShow2}" href="${imgAndTextCTALink2}"><button class="my-2 btn btn-primary" type="submit" style="background: ${imgAndTextCTABgColor2} !important; border: 1px solid ${imgAndTextCTABgColor2} !important; color: ${imgAndTextCTATextColor2} !important">${imgAndTextCTAText2}</button></a>
+          </div>
+        </div>
+    	</div>
+    </div>
+    <!-- Img + Text Section 2 -->
+
+    <!-- Text + Img Section 2 -->
+    <div id="textAndImg2" style="display:${showtextAndImg2}; order:${orderTextAndImg2};">
+    	<div class="container">
+        <div class="row align-items-center justify-content-center gap-5">
+          <div class="col-lg-5 px-3">
+            <div class="mktoText" id="textAndImgHeader2" mktoName="Section Header">
+              <h2>Refine materials management for greatest cost savings</h2>
+            </div>
+            <div class="mktoText" id="textAndImgBodyText2" mktoName="Section Body Text">
+              <h5>Using intelligent automation, Olive connects your EHR and ERP to improve sourcing and materials management. Olive evaluates historical trends to make recommendations on physician preference card updates, item master cleanup and inventory management.</h5>
+            </div>
+            <a style="display: ${textAndImgCTAShow2}" href="${textAndImgCTALink2}"><button class="my-2 btn btn-primary" type="submit" style="background: ${textAndImgCTABgColor2} !important; border: 1px solid ${textAndImgCTABgColor2} !important; color: ${textAndImgCTATextColor2} !important">${textAndImgCTAText2}</button></a>
+          </div>
+          <div class="col-lg-5">
+            <div class="mktoImg centered" id="textAndImgImage2" mktoName="Section Image" mktoImgClass="img-responsive" style="max-height: 350px !important; border-radius: 8px;">
+            </div>
+          </div>
+        </div>
+    	</div>
+    </div>
+    <!-- Text + Img Section 2 -->
+
+
+    <!-- Quote Section -->
+    <div id="quoteSection" style="display:${showQuoteSection}; order:${orderQuoteSection};">
+      <div class="container" style="height: 240px;padding-top: 40px;">
+          <div class="row left mx-md-5 px-md-2">
+            <div class="icons-white-bg">
+              <div class="col-11 mx-auto">
+                <img src="http://discover.oliveai.com/rs/541-CSN-882/images/quotesImg.png" alt="Quotes Image" style="position: absolute;z-index: -1;margin-top: -55px;margin-left: -75px;" class="mktoImg" id="quotesBgImage" mktoName="Quotes BG Logo">
+                <div class="mktoText" id="quoteSectionQuote" mktoName="Quote Section Quote" style="margin:20px;">
+                  <p>"Once the pandemic hit, we said as an organization, if we were going to thrive, we need all hands on deck to carry out our digital strategy."</p>
+                </div>
+                <div class="mktoText" id="quoteSectionAuthor" mktoName="Quote Section Author" style="margin:20px; margin-bottom: 0px;">
+                  <h4 style="margin-bottom: 0px;">Gerald Oetzel</h4>
+                </div>
+                <div class="mktoText" id="quoteSectionTitle" mktoName="Quote Section Title" style="margin:20px; margin-top: 0px;">
+                  <p style="margin-top: 0px;">Chief Financial Officer of Gundersen Health System</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Quote Section -->
+
+    <!-- Paragraph Section -->
+    <div id="paragraphSection" style="display:${showParagraphSection}; order:${orderParagraphSection};">
+      <div class="container">
+          <div class="row left mx-md-5 px-md-2">
+            <div class="icons-white-bg">
+              <div class="col-11 mx-auto">
+                  <div class="mktoText" id="paragraphSectionText" mktoName="Paragraph Section Text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at ex vitae augue eleifend molestie. Fusce feugiat ipsum sed lectus mollis, vitae dictum ex aliquet. Curabitur facilisis lectus fringilla nisl facilisis, a iaculis neque molestie. Phasellus in ultricies elit. Maecenas pharetra auctor ligula a rhoncus. Maecenas luctus interdum accumsan. Suspendisse interdum finibus lacus id dictum. Nulla dictum nulla eu orci tristique imperdiet. Praesent dui elit, imperdiet at volutpat eget, varius vel nulla. Nulla vitae mollis lacus. In et bibendum lacus. Praesent semper ultricies dignissim. Mauris ut urna lacus. </p>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- Paragraph Section -->
+
+    <!-- Paragraph Section 2 -->
+    <div id="paragraphSection2" style="display:${showParagraphSection2}; order:${orderParagraphSection2};">
+      <div class="container">
+          <div class="row left mx-md-5 px-md-2">
+            <div class="icons-white-bg">
+              <div class="col-11 mx-auto">
+                  <div class="mktoText" id="paragraphSectionText2" mktoName="Paragraph Section 2 Text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at ex vitae augue eleifend molestie. Fusce feugiat ipsum sed lectus mollis, vitae dictum ex aliquet. Curabitur facilisis lectus fringilla nisl facilisis, a iaculis neque molestie. Phasellus in ultricies elit. Maecenas pharetra auctor ligula a rhoncus. Maecenas luctus interdum accumsan. Suspendisse interdum finibus lacus id dictum. Nulla dictum nulla eu orci tristique imperdiet. Praesent dui elit, imperdiet at volutpat eget, varius vel nulla. Nulla vitae mollis lacus. In et bibendum lacus. Praesent semper ultricies dignissim. Mauris ut urna lacus. </p>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- Paragraph Section 2 -->
+
+    <!-- Quote Banner Section -->
+    <div id="quoteBannerSection" style="display:${showQuoteBannerSection}; order: ${orderquoteBannerSection};" class="mx-auto my-5">
+      <div class="container quoteBannerSectionContainer">
+        <div class="row" style="padding: 20px;">
+          <div class="col-10" style="text-align: ${quoteBannerTextAlignment};">
+            <div class="mktoText" id="quoteBannerSectionTitle" mktoName="Quote Banner Section Title" style="margin-top:20px;">
+              <h4 style="margin-bottom: 0px;">Olive’s results at Tufts 1</h4>
+            </div>
+              <div class="mktoText" id="quoteBannerSectionText" mktoName="Quote Banner Section Text" style="margin:20px auto;">
+                <p>Learn how Olive streamlined the COVID-19 testing operations at Tufts Medical Center and delivered results in just 4 months, including increased patient access and more than 6,000 hours of employee work saved since Olive’s inception.</p>
+              </div>
+              <a id="quoteBannerSectionCTA" mktoName="Quote Banner Section CTA" style="display: ${showQuoteBannerCTA}; margin-bottom: 20px" href="${quotebannerCTALink}"><button class="btn btn-primary" type="submit" style="background: ${QuoteBannerCTABgColor} !important; border: 1px solid ${QuoteBannerCTABgColor} !important;  color: ${QuoteBannerCTATextColor} !important">${quoteBannerCTAText}</button></a>
+          </div>
+          <div class="col-2">
+            <div class="mktoImg centered bannerIcon" id="quoteBannerImage" mktoName="Section Image" mktoImgClass="expandToFit img-responsive" style="min-height:100%; width: 100%; margin-top: 45px; display: ${showQuoteBannerSectionImage};">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Quote Banner Section -->
+
+    <!-- Quote Banner Section 2 -->
+    <div id="quoteBannerSection2" style="display:${showQuoteBannerSection2}; order: ${orderquoteBannerSection2};">
+      <div class="container quoteBannerSectionContainer2">
+        <div class="row" style="padding: 20px;">
+          <div class="col-12">
+            <div class="mktoText" id="quoteBannerSectionTitle2" mktoName="Quote Banner Section 2 Title" style="margin-top:20px;">
+              <h4 style="margin-bottom: 0px;">Olive’s results at Tufts 2</h4>
+            </div>
+              <div class="mktoText" id="quoteBannerSectionText2" mktoName="Quote Banner Section 2 Text" style="margin:20px auto;">
+                <p>Learn how Olive streamlined the COVID-19 testing operations at Tufts Medical Center and delivered results in just 4 months, including increased patient access and more than 6,000 hours of employee work saved since Olive’s inception.</p>
+              </div>
+              <a id="quoteBannerSectionCTA2" mktoName="Quote Banner Section 2 CTA" style="display: ${showQuoteBannerCTA2}; margin-bottom: 20px" href="${quoteBannerCTA2Link}"><button class="btn btn-primary" type="submit" style="background: ${QuoteBannerCTABgColor2} !important; border: 1px solid ${QuoteBannerCTABgColor2} !important;  color: ${QuoteBannerCTATextColor2} !important">${quoteBannerCTA2Text}</button></a>       
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Quote Banner Section 2 -->
+
+    <!-- Footer Notes Section -->
+    <div id="footerNotesSection" style="display:${showFooterNotesSection}; order: ${orderFooterNotes};" class="mx-auto my-5">
+      <div class="container" style="text-align: center;">
+        <div style="padding: 20px;">
+          <div class="col-12">
+              <div class="mktoText" id="footerNotesSectionText" mktoName="Footer Notes Section Text" style="margin:20px auto;">
+                <p>1. https://www.mckinsey.com/business-functions/risk/our-insights/the-risks-and-challenges-of-the-global-covid-19-vaccine-rollout</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Notes Section -->
+
+    <!-- Features Section -->
+    <div id="featuresSection" style="display:${showFeaturesSection}; order:${orderFeaturesSection};">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/cycle.png" alt="Cycle image logo" style="margin-top: 6px;">
+                    <h3>Eliminate the cycle</h3>
+                    <p>Remove the administrative burdens that cost health systems millions in revenue.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/revenue.png" alt="Revenue image logo">
+                    <h3>Reduce revenue delays</h3>
+                    <p>Eliminate the uncertainty and delays in receiving payments from patients and payers.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/insigths.png" alt="Insights image logo">
+                    <h3>Sharpen your financial insights</h3>
+                    <p>Proactively address issues and guide care with real-time value calculations that detail top-line growth and financial insight.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Section -->
+
+    <!-- Partners Section -->
+    <div id="partnersSection" style="display:${showPartnersSection}; order:${orderPartnersSection};">
+        <div class="container">
+            <div class="row" style="text-align: center; justify-content: center;">
+                <div class="col-12 col-md-10">
+                    <h2>Our Featured Partners</h2>
+                    <p>From startups to enterprise organizations, Olive Helps technology companies solve healthcare’s biggest challenges — mitigating risk and physician burnout, reducing costly patient readmissions and so much more.</p>
+                </div>
+            </div>
+            <div class="row" style="text-align: center; justify-content: center;">
+                <div class="col-10">
+                    <hr style="border-top: 2px solid linear-gradient(90deg, rgba(193, 193, 193, 0.12) 0%, #C1C1C1 50.38%, rgba(193, 193, 193, 0.12) 100%);">
+                </div>
+            </div>
+            <div class="row" style="justify-content: center;">
+                <div class="col-12 col-md-6 col-lg-3 col-xl-2 partnerImgDiv">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/sponsor1.png" alt="sponsor Logo 1" class="mktoImg" id="sponsorLogo1" mktoName="Sponsor Logo 1">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 col-xl-2 partnerImgDiv">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/sponsor2.png" alt="sponsor Logo 2" class="mktoImg" id="sponsorLogo2" mktoName="Sponsor Logo 2">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 col-xl-2 partnerImgDiv">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/sponsor3.png" alt="sponsor Logo 3" class="mktoImg" id="sponsorLogo3" mktoName="Sponsor Logo 3">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 col-xl-2 partnerImgDiv">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/sponsor4.png" alt="sponsor Logo 4" class="mktoImg" id="sponsorLogo4" mktoName="Sponsor Logo 4">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 col-xl-2 partnerImgDiv">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/sponsor5.png" alt="sponsor Logo 5" class="mktoImg" id="sponsorLogo5" mktoName="Sponsor Logo 5">
+                </div>
+            </div>
+            <div class="row" style="justify-content: center;">
+                <div class="col-12 col-md-6 col-lg-3 col-xl-2 partnerImgDiv">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/sponsor6.png" alt="sponsor Logo 6" class="mktoImg" id="sponsorLogo6" mktoName="Sponsor Logo 6">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 col-xl-2 partnerImgDiv">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/sponsor7.png" alt="sponsor Logo 7" class="mktoImg" id="sponsorLogo7" mktoName="Sponsor Logo 7">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 col-xl-2 partnerImgDiv">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/sponsor8.png" alt="sponsor Logo 8" class="mktoImg" id="sponsorLogo8" mktoName="Sponsor Logo 8">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 col-xl-2 partnerImgDiv">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/sponsor9.png" alt="sponsor Logo 9" class="mktoImg" id="sponsorLogo9" mktoName="Sponsor Logo 9">
+                </div>
+                <div class="col-5  col-md-6 col-lg-3 col-xl-2 partnerImgDiv">
+                    <img src="https://discover.oliveai.com/rs/541-CSN-882/images/sponsor10.png" alt="sponsor Logo 10" class="mktoImg" id="sponsorLogo10" mktoName="Sponsor Logo 10">
+                </div>
+            </div>
+            <div class="row" style="text-align: center; justify-content: center;">
+                <div class="col-10">
+                    <hr style="border-top: 2px solid linear-gradient(90deg, rgba(193, 193, 193, 0.12) 0%, #C1C1C1 50.38%, rgba(193, 193, 193, 0.12) 100%);">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Partners Section -->
+
+    <!-- Divider Section -->
+    <div id="dividerSection" style="display:${showDividerSection}; order:${orderDividerSection};">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 dividerLine" ></div>
+        </div>
+      </div>
+    </div>
+    <!-- Divider Section -->
+
+    <!-- Simple Footer Section -->
+    <div id="simpleFooterSection" style="display:${showSimpleFooterSection}; order:${orderSimpleFooterSection};">
+        <div class="container">
+            <div class="row" style="padding-top: 14px;padding-bottom: 10px;">
+                <div class="col-12 col-md-4" style="line-height: 42px;">
+                    <a href="https://oliveai.com/legal/">Privacy Policy</a>
+                    <a href="https://oliveai.com/our-story/">Olive's Story</a>
+                    <a href="https://oliveai.com/blog/">Blog</a>
+                </div>
+                <div class="col-12 col-md-6">
+                </div>
+                <div class="col-12 col-md-2">
+                    <p>2021 Olive AI</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Simple Footer Section -->
+
+    <!-- Complex Footer Section -->
+    <div id="complexFooterSection" style="display:${showComplexFooterSection}; order:${orderComplexFooterSection};">
+      <div class="container">
+          <div class="row" style="padding-top: 40px;padding-bottom: 10px; justify-content: space-between;">
+              <div class="col-12 col-lg-2">
+                <img class="complexFooterLogo"src="https://discover.oliveai.com/rs/541-CSN-882/images/oliveAILogo.png" alt="OliveAI Logo">
+                <p>99 E Main St,<br>Columbus, OH 43215</p>
+                <div>
+                  <a href="https://www.instagram.com/oliveai__/"><img src="https://discover.oliveai.com/rs/541-CSN-882/images/instagram.png" alt="instagram logo" class="instaLogo"></a>
+                  <a href="https://www.linkedin.com/company/hireolive/" style="margin-left: 10px;"><img src="https://discover.oliveai.com/rs/541-CSN-882/images/linkedin.png" alt="linkedin logo" class="linkedinLogo"></a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4" style="padding-left: 60px;padding-right: 60px;">
+                <h3>Stay up-to-date with OliveReads</h3>
+                <p>Join 14,000+ other healthcare executives and subscribe to our newsletter – you’ll receive the latest Olive news and trending stories about healthcare AI and automation.</p>
+              </div>
+              <div class="col-12 col-lg-2">
+                <h3>ABOUT</h3>
+                <ul>
+                  <li><a href="https://oliveai.com/about/">About Olive</a></li>
+                  <li><a href="https://oliveai.com/careers/">Careers</a></li>
+                  <li><a href="https://oliveai.com/contact/">Contact us</a></li>
+                  <li><a href="https://oliveai.com/lets-talk/">Let’s talk</a></li>
+                  <li><a href="https://oliveai.com/open-positions/">Open positions</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-2">
+                <h3>RESOURCES</h3>
+                <ul>
+                  <li><a href="https://oliveai.com/blog/">Blog</a></li>
+                  <li><a href="https://oliveai.com/media-center/">Media center</a></li>
+                  <li><a href="https://oliveai.com/videos/">Olive videos</a></li>
+                  <li><a href="https://oliveai.com/case-studies/">Case studies &amp; datasheets</a></li>
+                  <li><a href="https://oliveai.com/webinars/">Olive webinars on-demand</a></li>
+                  <li><a href="https://oliveai.com/whitepapers/">Whitepapers &amp; eBooks</a></li>
+                </ul>
+              </div>
+          </div>
+          <div class="row" style="justify-content: center;">
+            <hr class="complexFooterDivider">
+          </div>
+          <div class="row" style="margin-top: 20px;margin-bottom: 60px;  justify-content: left;">
+            <div class="col-2" style="max-width: max-content;">
+              <a href="https://oliveai.com/legal/">Privacy Policy</a>
+            </div>
+            <div class="col-1">
+              <a href="https://oliveai.com/sitemap/">Sitemap</a>
+            </div>
+          </div>
+      </div>
+  </div>
+  <!-- Complex Footer Section -->
+  </main>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//templates.marketo.net/template1/js/jquery.min.js"></script>
+    <script src="//templates.marketo.net/template1/js/bootstrap.min.js"></script>
+    <script src="//templates.marketo.net/template1/js/retina-1.1.0.js"></script>
+</body>
+</html>
